@@ -1,23 +1,30 @@
-<<<<<<< HEAD
-## Getting Started
+<h1 align="center"> Conversor de divisas con API integrada </h1>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este es un proyecto para el challenge "Conversor de divisas" de Alura One, el cual fue construido usando Spring Boot. Para este proyecto se tomó como funcionalidad base lo solicitado en las condiciones del mismo, el cual consiste básicamente en un sistema para convertir distintas divisas tomando como base el peso mexicano. Para este proyecto se utilizaron las siguientes divisas:
+* Dolar estadounidense
+* Euro
+* Libra esterlina
+* Yen japonés
+* Won sur coreano
 
-## Folder Structure
+Además, se utilizó la funcionalidad de conversor de temperaturas proprocionadas por el equipo de Alura One, el cual consiste en un sistema para convertir entre si distintos sistemas de temperatura, los cuales son:
+* Celsius
+* Fahrenheit
+* Kelvin
 
-The workspace contains two folders by default, where:
+Con el fin de entregar un proyecto un poco más elaborado, se añadieron algunas funciones adicionales, las cuales se enlistan a continuación:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## :hammer:Funcionalidades adicionales
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- `API`: Se integró la API de OpenExchange para que el usuario del sistema tenga los valores mas actualizados de las divisas al momento de la conversión.
+- `Se añadió la conversión de temperatura entre Fahrenheit y Kelvin`: En el proyecto original no estaba considerada la conversión entre grados Fahrenheit y Kelvin, por lo que para esta versión se añadió dicha conversión.
+- `Conversiones formuladas`: Las conversiones de temperatura se hacen utilizando fórmulas precisas, a diferencia del proyecto original que no tenía consideradas algunas fórmulas dentro del esquema de conversión de algunos sistemas de temperatura.
+- `Corrección de errores`: El sistema de conversión de temperatura tenía algunos errores, principalmente al convertir Kelvin a Celsius, ya que el código llamaba algunos métodos que se repetían, por lo que el resultado no era el esperado, además de que proporcionada respuestas no solicitadas.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+<h4 align="center">:construction: Proyecto en mejora :construction:</h4>
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-=======
-# Conversor-Divisas
-Conversor de divisas challenge Alura One
->>>>>>> cc36f2d7c0b9542ab2311107436b4c6ee549a868
+Dentro de las mejoras que se van a realizar al proyecto se encuentran:
+* Herramienta para que el usuario escriba las divisas con las que quiere hacer las conversiones, independientemente de que no estén contempladas en el listado de conversión.
+* Mejora de la interfaz visual, para hacerla más dinámica.
+* Implementar base de datos para almacenar el histórico de consultas del usuario, así como para tener un historial del valor de las divisas a lo largo del tiempo.
+* Añadir gráficas de información histórica.
